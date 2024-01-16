@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.asiwaju_trend{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-bar{
+    width: 100%;
+    height: auto;
+    background-color: rgb(102, 11, 11);
+    color: #fff;
+    font-size: 1.1rem; 
+    display: flex;
+    align-items: center;
+    /* position: fixed; */
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid white;
+}
+.dropdown > .caret {
+    margin-left: auto;
+    transition: 0.3s;
+}
+.dropdown:hover > .caret {
+    rotate: -180deg;
+}
+.menu {
+    position: absolute;
+    width: 150px;
+    background-color: rgb(67, 201, 138);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    scale: 0.85;
+    transition: 0.3s;
+}
+.dropdown:hover > .menu {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+}
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+.menu a:hover {
+    background-color: green;
+    color: #fff;
+}
+
+
+
+
+
+.nav-bar .logo img {
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+}
+.nav-menu{
+    margin: 0 auto;
+}
+.nav-menu ul{
+    padding: 20px;
+    margin: 0 auto;
+}
+.nav-menu > ul li {
+    display: inline-block;  
+}
+.nav-menu > ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+.nav-menu ul li a:hover{
+    color: yellow;
+}
+.nav-menu ul li::after  {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: yellow;
+    display:none;
+}
+.nav-menu ul li:hover::after{
+    display: block;
+}
+.nav-bar .menubar i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+.nav-icons{
+    display: flex;
+}
+.nav-icons a i{
+    color: #fff;
+    margin: 0 10px;
+}
+.nav-user{
+    display: flex;
+}
+.nav-user button{
+    width: auto;
+    color: #fff;
+    margin: 0 10px;
+    border: none;
+    border-radius: 2px;
+    padding: 10px ;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+}
+.nav-user button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(102, 11, 11);
+
+}
+
+.kaftan{
+    width: 100%;
+    height: auto;
+}
+.kaftan-heading{
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+.kaftan-heading h1 {
+    font-weight: 100;
+}
+.kaftan-heading p{
+    margin-top: 20px;
+}
+.collection-box {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 5%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.item-card{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+    
+}
+.card-image{
+    width: 350px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.item-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s ease;
+}
+.item-card:hover img{
+    transform: scale(1.1);
+}
+
+.img-top {
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.card-image:hover .img-top {
+    display: inline-block;
+}
+.img-top img{
+    transition: transform 0.9s ease;
+}
+.img-top:hover img{
+    transform: scale(1.1);
+}
+
+.card-content{
+    width: 100%;
+    color: #fff;
+    background-color: rgba(46, 5, 5, 0.6);
+    padding: 10px;
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+.card-txt a {
+    text-decoration: none;
+    color: #fff;
+}
+.card-txt a:hover {
+    color:#ffd700;
+}
+.icon i{
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.rating {
+    color:#ffd700;
+}
+
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: #660b0b;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-box{
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+
+}
+.footer-box img{
+    width: 150px;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 25%;
+    margin-top: 15%;
+    border: 1px solid;
+}
+.footer h3{
+    padding: 10px;
+    
+}
+.footer-box a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    padding: 10px;
+}
+.footer-box a:hover{
+    color: rgb(240, 204, 0);
+}
+.footer-box p{
+    padding: 10px;
+}
+.social-media i {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width:900px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* For mobile phones: */
+    .nav-bar{
+        height: 50px;
+        /* padding: 20px 0; */
+    }
+    .nav-menu ul{
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        background-color: #000000;
+        height: auto;
+        width: 100%;
+        text-align: center ;
+        transition: all 0.7s ease;
+        z-index: 1;
+    }
+    #click:checked ~ .nav-menu ul{
+        left: 0;
+    }
+    .nav-bar .menubar i{
+        display: block;
+    }
+    #click:checked ~ .menubar i:before{
+        content: "\f00d";
+    }
+    .nav-menu ul li{
+        display: block;
+
+    }
+    .nav-menu ul li a{
+        display: block;
+    }
+    
+    .collection-box {
+        width: 100%;
+        display: block;
+    }
+    .item-card{
+        margin-bottom: 5%;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .footer-box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3%;
+        /* margin-top: 5%; */
+    }
+    .footer-box img{
+       margin-top: 8%;
+       margin-left: 0;
+    }
+    
+  }
